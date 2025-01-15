@@ -39,7 +39,7 @@ export default function HeroReveal() {
     <main className="mb-[20vh] sm:w-full">
       <div ref={container} className="relative h-[200vh] bg-[#141414] sm:!min-w-screen ">
         <div ref={stickyMask} className={styles.stickyMask}>
-          <div className=" bg-[#fee17f] w-full min-h-screen"></div>
+          <div className=""></div>
         </div>
       </div>
     </main>
