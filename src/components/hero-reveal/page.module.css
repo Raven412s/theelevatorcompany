@@ -16,7 +16,7 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
-    mask-image: url('/images/group-2.svg');
+    mask-image: url('../../app/\(images\)/Group-2.svg');
     mask-repeat: no-repeat;
     mask-size:  90%;
     mask-position: 48.6% center;
