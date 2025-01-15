@@ -1,3 +1,4 @@
+import GetQuote from "@/components/custom/GetQuote";
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -22,6 +23,7 @@ export default function RootLayout({
         suppressContentEditableWarning
       >
         <Navbar/>
+        <GetQuote/>
         {children}
       </body>
     </html>

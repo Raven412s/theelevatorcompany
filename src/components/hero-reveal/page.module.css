@@ -1,11 +1,12 @@
-.main{
-
-  }
+@font-face {
+    font-family: "porla";
+    src: url("/fonts/Porladek-BF6538b588012a4.woff2");
+}
 
   .container{
     position: relative;
     height: 200vh;
-    background-color: #141414;
+    background-color: #191919;
   }
 
   .stickyMask{
@@ -13,21 +14,20 @@
     overflow: hidden;
     position: sticky;
     top: 0rem;
-    height: 100vh;
+    height: 80vh;
     align-items: center;
     justify-content: center;
     mask-image: url('../../app/\(images\)/Group-2.svg');
     mask-repeat: no-repeat;
     mask-size:  90%;
     mask-position: 48.6% center;
+    mask-type: luminance;
   }
 
 .stickyMask> div{
-    @apply bg-[#fee17f] w-full min-h-screen
+    @apply bg-black w-full h-fit
 }
 
-  .stickyMask video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  .prime{
+    font-family: "porla";
   }
