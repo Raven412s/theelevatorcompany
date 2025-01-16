@@ -1,9 +1,7 @@
 import AnimatedText from "@/components/animated/AnimatedText";
-import GetQuote from "@/components/custom/GetQuote";
 import Line from "@/components/custom/Line";
 import HeroReveal from "@/components/hero-reveal/HeroReveal";
-import Image from "next/image";
-
+import SmoothScroll from "@/components/custom/SmoothParrallax/page"
 export default function Home() {
 
   return (
@@ -23,7 +21,7 @@ export default function Home() {
                     }}
                   >
                     <strong className="text-5xl h-full flex justify-center pb-20 prime uppercase">
-                      <AnimatedText phrase={"crafting precision for elevators"} animationDelay={800} />
+                      <AnimatedText phrase={"crafting precision for elevators"} />
                     </strong>
                   </div>
                   <div className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-lg w-full h-full">
@@ -33,16 +31,48 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-lg h-[20vh]">
-                  <h2 className="text-white text-xl font-semibold">Glassmorphism Card</h2>
-                  <p className="text-white/80">This is a glassy effect with transparency and blur.</p>
+                  <h2 className="text-white text-2xl font-medium underline">Why choose us</h2>
+               <p className="text-white/80 text-2xl text-ellipsis">
+                  Umatched Expertise,
+                  After Sales Support,
+                  Sustainability Focus,
+                  Commitment to Safety,
+                  Innovative Solutions,
+                  Quality Craftsmanship.
+               </p>
                 </div>
                 <div className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-lg h-[20vh]">
-                  <h2 className="text-white text-xl font-semibold">Glassmorphism Card</h2>
-                  <p className="text-white/80">This is a glassy effect with transparency and blur.</p>
+                  <h2 className="text-white text-2xl font-medium underline">Our Values</h2>
+                  <p className="text-white/80 text-2xl text-justify">Integrity, Innovation, Excellence.</p>
                 </div>
               </div>
             </div>
         <Line/>
+        <div className="flex w-full gap-3 justify-between px-10 py-16">
+          <h3 className="text-7xl mx-8 font-semibold max-w-[350px]"><AnimatedText phrase={"WHAT WE CREATE"}/></h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" viewBox="0 0 24 24">
+            <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+          </svg>
+
+      <div className="flex flex-col items-start w-3/5">
+        <div className="flex justify-start items-end mb-6">
+          <p className="text-2xl mt-2">Luxury Home Lifts</p>
+          <div className="w-[1px] h-8 bg-gray-400 ml-5" />
+          <p className="text-xl align-baseline  ml-6">
+          FELIX, FELIX 2.0, CLIMBER X, PNEUMATIC VACUUM.
+          </p>
+        </div>
+        <div className="flex justify-start items-end">
+          <p className="text-2xl mt-2">Commercial Lifts</p>
+          <div className="w-[1px] h-8 bg-gray-400 ml-[33px]" />
+          <p className="text-xl align-baseline  ml-8">
+          ELIVIO, ELIVIO 2.0, ELEVENTRA.
+          </p>
+        </div>
+      </div>
+      </div>
+      <Line/>
+      <SmoothScroll/>
 
     </div>
   );

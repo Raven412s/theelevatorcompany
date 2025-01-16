@@ -1,8 +1,9 @@
 'use client';
 import { useRef, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 
-export default function AnimatedText({ phrase, animationDelay = 0 }) {
+export default function AnimatedText({ phrase }) {
   const refs = useRef([]); // Array to store references to letters
 
   // Function to split words into `p` elements containing letters
@@ -31,12 +32,18 @@ export default function AnimatedText({ phrase, animationDelay = 0 }) {
     ));
   };
 
+  // Intersection Observer
+  const { ref: containerRef, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the component is visible
+    triggerOnce: true, // Run animation only once
+  });
+
   // GSAP Animation
   useEffect(() => {
-    if (refs.current.length > 0) {
-      // Apply staggered animation to letters with delay
+    if (inView && refs.current.length > 0) {
+      const validRefs = refs.current.filter((el) => el !== null); // Ensure no null refs
       gsap.fromTo(
-        refs.current,
+        validRefs,
         { y: 100, opacity: 0 },
         {
           y: 0,
@@ -44,19 +51,17 @@ export default function AnimatedText({ phrase, animationDelay = 0 }) {
           stagger: 0.1,
           duration: 2,
           ease: 'power3.out',
-          delay: animationDelay / 1000, // Convert delay from ms to seconds
         }
       );
     }
-  }, [animationDelay]); // Trigger useEffect when animationDelay changes
+  }, [inView]);
 
   return (
     <main
       className="flex items-end justify-center bg-transparent text-gray-900"
+      ref={containerRef} // Attach observer to main container
     >
-      <div className="w-full flex flex-wrap">
-        {splitWords(phrase)}
-      </div>
+      <div className="w-full flex flex-wrap">{splitWords(phrase)}</div>
     </main>
   );
 }

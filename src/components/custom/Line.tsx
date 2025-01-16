@@ -119,45 +119,6 @@ export default function Line() {
           ></path>
         </svg>
       </div>
-      <div className="flex flex-col items-start w-3/5">
-        <div className="flex justify-start items-end mb-6">
-          <p className="text-2xl mt-2">Luxury Home Lifts</p>
-          <div className="w-[1px] h-8 bg-gray-400 ml-5" />
-          <p className="text-xl align-baseline  ml-6">
-          FELIX, FELIX 2.0, CLIMBER X, PNEUMATIC VACUUM.
-          </p>
-        </div>
-        <div className="flex justify-start items-end">
-          <p className="text-2xl mt-2">Commercial Lifts</p>
-          <div className="w-[1px] h-8 bg-gray-400 ml-[33px]" />
-          <p className="text-xl align-baseline  ml-8">
-          ELIVIO, ELIVIO 2.0, ELEVENTRA.
-          </p>
-        </div>
-        <div className="flex mt-12">
-          <p>Areas</p>
-          <div className="flex w-full ml-8 flex-wrap gap-2.5">
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              E-commerce
-            </p>
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              Finance
-            </p>
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              Education
-            </p>
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              Social
-            </p>
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              Entertainment
-            </p>
-            <p className="border border-white rounded-full uppercase text-lg py-2.5 px-3">
-              Medicine
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
