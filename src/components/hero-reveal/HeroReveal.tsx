@@ -51,7 +51,7 @@ export default function HeroReveal() {
             <div className="h-full relative  flex justify-center items-center">
             {/* <Image src={"/images/noise.jpg"} alt='texture' width={720} height={300} className=' absolute z-20 opacity-15 w-[72vw] h-[99vh] object-cover ' /> */}
             <video
-              className="w-[72vw] h-[99vh] rounded-lg  z-10"
+              className="w-dvw h-dvh object-cover rounded-lg  z-10"
               autoPlay
               muted
               loop

@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Button } from '../ui/button';
+import { TiContacts } from 'react-icons/ti';
+import { Quote } from 'lucide-react';
 
 export default function GetQuote() {
   const [offsetTop, setOffsetTop] = useState(0); // State to track top offset
@@ -24,7 +26,7 @@ export default function GetQuote() {
 
   return (
     <div
-      className="fixed top-4 right-4 z-[9999]  text-white rounded-lg flex items-center justify-center shadow-lg transition-transform"
+      className="fixed-top-right top-7 right-8  fixed z-[9999]  text-white rounded-lg flex items-center justify-center shadow-lg transition-transform"
       style={{
         transform: `translateY(${offsetTop}px)`,
       }}
@@ -33,7 +35,7 @@ export default function GetQuote() {
          href="https://wa.me/6393883250?text=Hello%20there!%20I%20wanted%20to%20contact%20you."
          target="_blank"
          style={{color: "green", textDecoration: "none", fontWeight: "bold"}}>
-      <Button className='rounded-xl' >Get Quote</Button>
+      <Button className='rounded-xl bg-golden-400' ><Quote/></Button>
       </a>
     </div>
   );

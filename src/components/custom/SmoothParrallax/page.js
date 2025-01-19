@@ -1,11 +1,13 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import styles from './page.module.scss';
-import Image from 'next/image';
-import Lenis from '@studio-freight/lenis';
-import { useTransform, useScroll, motion, useInView } from 'framer-motion';
-import InfiniteText from '../InfiniteText/InfiniteText';
 import AnimatedText from '@/components/animated/AnimatedText';
+import Lenis from '@studio-freight/lenis';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
+import css from '../InfiniteText/page.module.css';
+import styles from './page.module.scss';
+import gsap from 'gsap';
 
 const images = [
   "1.jpg",
@@ -30,6 +32,41 @@ export default function SmoothScroll() {
   const gallery = useRef(null);
   const spacerRef = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: e => direction = e.direction * -1
+      },
+      x: "-500px",
+    })
+    requestAnimationFrame(animate);
+  }, [])
+
+  const animate = () => {
+    if(xPercent < -100){
+      xPercent = 0;
+    }
+    else if(xPercent > 0){
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, {xPercent: xPercent})
+    gsap.set(secondText.current, {xPercent: xPercent})
+    requestAnimationFrame(animate);
+    xPercent += 0.1 * direction;
+  }
+
 
   // Check if the spacer div is in view
   const spacerInView = useInView(spacerRef, { once: true }); // `once: true` ensures the animation runs only the first time it comes into view
@@ -68,7 +105,7 @@ export default function SmoothScroll() {
   return (
     <main className={styles.main}>
       {/* Spacer with animated content */}
-      <div ref={spacerRef} className={styles.spacer}>
+      {/* <div ref={spacerRef} className={styles.spacer}>
         {spacerInView && (
           <>
             <motion.div
@@ -91,7 +128,7 @@ export default function SmoothScroll() {
             </motion.div>
           </>
         )}
-      </div>
+      </div> */}
 
       {/* Parallax Gallery */}
       <div ref={gallery} className={styles.gallery}>
@@ -99,11 +136,6 @@ export default function SmoothScroll() {
         <Column images={[images[3], images[4], images[5]]} y={y2} />
         <Column images={[images[6], images[7], images[8]]} y={y3} />
         <Column images={[images[9], images[10], images[11]]} y={y4} />
-      </div>
-
-      {/* Spacer for layout continuation */}
-      <div className={styles.spacer}>
-        <InfiniteText/>
       </div>
     </main>
   );

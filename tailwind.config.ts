@@ -1,6 +1,5 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
     darkMode: ["class"],
     content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -59,12 +58,29 @@ const config: Config = {
   				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
-  			}
+  			},
+            north: {
+                50: '#DFDFF0',
+                75: "#DFDFF2",
+                100: "#F0F2FA",
+                200: "#010101",
+                300: "#4FB7DD"
+            },
+            west: {
+                300: '#5724FF'
+            },
+            south: {
+                100: '#8E983F',
+                300: '#EDFF66'
+            },
+            golden: {
+                400: "#dab74e"
+            }
   		},
   		borderRadius: {
-  			lg: "12px",
-  			md: '8px',
-  			sm: '6px'
+  			lg: '1.5rem',
+  			md: '0.8rem',
+  			sm: '0.5rem)'
   		},
   		keyframes: {
   			'accordion-down': {
@@ -87,9 +103,18 @@ const config: Config = {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+        fontFamily: {
+            zentry: ['zentry', 'sans-serif'],
+            general: ['general', 'sans-serif'],
+            'circular-web' : ['circular-web', 'sans-serif'],
+            'robert-medium': ['robert-medium', 'sans-serif'],
+            'robert-regular': ['robert-regular', 'sans-serif']
+        },
+        transitionTimingFunction: {
+            'custom-ease': 'cubic-bezier(0.65, 0.05, 0.36, 1)',
+          },
   	}
   },
   plugins: [require("tailwindcss-animate")],
 };
-export default config;
