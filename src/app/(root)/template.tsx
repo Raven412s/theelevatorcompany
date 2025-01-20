@@ -12,9 +12,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
     if (logo) {
       const tl = gsap.timeline()
 
-      tl.from(logo,{
-        scale:1,
-        opacity:1
+      tl.from(logo, {
+        scale: 1,
+        opacity: 1,
       })
 
       tl.to(logo, {
@@ -23,8 +23,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         ease: "easeInOut",
         repeat: 1, // Only one repeat for heartbeat
         yoyo: true,
-      })
-      .to(logo, {
+      }).to(logo, {
         opacity: 0, // Fade out
         duration: 1,
         delay: 0, // Delay to allow heartbeat effect to finish
@@ -38,7 +37,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
               duration: 1,
             })
           }
-        }
+        },
       })
     }
   }, [])
@@ -50,8 +49,14 @@ export default function Template({ children }: { children: React.ReactNode }) {
         className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9999] flex items-center justify-center"
         style={{ opacity: 1 }}
       >
-        {/* Your logo goes here */}
-        <img src="/images/the-elevator-company.png" alt="Logo" className="w-96 h-96" />
+        {/* Logo with square aspect ratio */}
+        <div className="w-48 aspect-square">
+          <img
+            src="/images/the-elevator-company.png"
+            alt="Logo"
+            className="w-full h-full object-contain"
+          />
+        </div>
       </div>
 
       {/* Main content */}
