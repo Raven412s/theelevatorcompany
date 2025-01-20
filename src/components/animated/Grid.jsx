@@ -45,14 +45,24 @@ export const BentoTilt = ({ children, className = "" }) => {
 
   const BentoCard = ({ src, title, description }) => {
     return (
-      <div className="relative size-full">
+      <div className="relative size-full group">
         {src.endsWith('.mp4') ? (
-          <video src={src} loop muted autoPlay className="absolute left-0 top-0 size-full object-cover object-center" />
+          <video
+            src={src}
+            loop
+            muted
+            autoPlay
+            className="absolute left-0 top-0 size-full object-cover object-center transition-transform duration-300 ease-in-out transform scale-100 brightness-75 group-hover:scale-105 group-hover:brightness-100"
+          />
         ) : (
-          <img src={src} alt={title} className="absolute left-0 top-0 size-full object-cover object-center" />
+          <img
+            src={src}
+            alt={title}
+            className="absolute left-0 top-0 size-full object-cover object-center transition-transform duration-300 ease-in-out transform scale-100 brightness-75 group-hover:scale-105 group-hover:brightness-100"
+          />
         )}
         <div className="relative z-10 size-full flex-col flex justify-between p-5 text-north-50">
-          <div className="">
+          <div>
             <h1 className="bento-title special-font">{title}</h1>
             {description && (
               <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
@@ -62,5 +72,6 @@ export const BentoTilt = ({ children, className = "" }) => {
       </div>
     );
   };
+
 
 export default BentoCard

@@ -158,7 +158,7 @@ element{
     }
 
     .special-font b {
-      font-family: "Zentry";
+      /* font-family: "Zentry"; */
       font-feature-settings: "ss01" on;
     }
 
@@ -194,7 +194,7 @@ element{
     }
 
     .bento-title {
-      @apply uppercase md:text-6xl text-4xl font-black font-zentry;
+      @apply uppercase md:text-6xl text-4xl font-black ;
     }
 
     .story-img-container {
