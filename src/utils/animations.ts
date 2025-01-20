@@ -1,42 +1,25 @@
 import gsap from "gsap";
-import {AppRouterInstance} from "next/dist/shared/lib/app-router-context.shared-runtime"
-
 
 export const AnimatePageIn = () => {
-    const bannerOne = document.getElementById("banner1")
-    const bannerTwo = document.getElementById("banner2")
-    const bannerThree = document.getElementById("banner3")
-    const bannerFour = document.getElementById("banner4")
+  const logoContainer = document.getElementById("logoContainer");
+  const logo = document.getElementById("logo");
 
-    if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-        const tl = gsap.timeline()
+  if (logoContainer && logo) {
+    const tl = gsap.timeline();
 
-        tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-            yPercent: 0
-        }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-            yPercent: 100,
-            stagger: 0.2
-        })
-    }
-}
-
-export const AnimatePageOut = ( href: string, router: AppRouterInstance)=>{
-    const bannerOne = document.getElementById("banner1")
-    const bannerTwo = document.getElementById("banner2")
-    const bannerThree = document.getElementById("banner3")
-    const bannerFour = document.getElementById("banner4")
-
-    if (bannerOne && bannerTwo && bannerThree && bannerFour) {
-        const tl = gsap.timeline()
-
-        tl.set([bannerOne, bannerTwo, bannerThree, bannerFour], {
-            yPercent: -100
-        }).to([bannerOne, bannerTwo, bannerThree, bannerFour], {
-            yPercent: 0,
-            stagger: 0.2,
-            onComplete: ()=>{
-                router.push(href)
-            }
-        })
-    }
-}
+    tl.to(logo, {
+      scale: 15, // Increase the size of the logo
+      opacity: 0, // Fade the logo out
+      duration: 3, // Animation duration
+      ease: "power2.inOut",
+    })
+      .to(logoContainer, {
+        opacity: 0, // Fade out the logo container
+        duration: 1, // Slight delay for container fade-out
+        ease: "power2.inOut",
+      })
+      .set(logoContainer, {
+        display: "none", // Remove the logo container from the flow
+      });
+  }
+};

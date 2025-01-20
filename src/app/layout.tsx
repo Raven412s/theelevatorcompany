@@ -1,4 +1,5 @@
 import GetQuote from "@/components/custom/GetQuote";
+import Contact from '@/components/custom/Contact'
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Navbar/>
         <GetQuote/>
         {children}
+        <Contact/>
       </body>
     </html>
   );

@@ -1,13 +1,11 @@
 'use client';
-import AnimatedText from '@/components/animated/AnimatedText';
 import Lenis from '@studio-freight/lenis';
 import { motion, useInView, useScroll, useTransform } from 'framer-motion';
+import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import css from '../InfiniteText/page.module.css';
 import styles from './page.module.scss';
-import gsap from 'gsap';
 
 const images = [
   "1.jpg",
@@ -32,9 +30,6 @@ export default function SmoothScroll() {
   const gallery = useRef(null);
   const spacerRef = useRef(null);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
-
-  const firstText = useRef(null);
-  const secondText = useRef(null);
   const slider = useRef(null);
   let xPercent = 0;
   let direction = -1;
@@ -61,8 +56,6 @@ export default function SmoothScroll() {
     else if(xPercent > 0){
       xPercent = -100;
     }
-    gsap.set(firstText.current, {xPercent: xPercent})
-    gsap.set(secondText.current, {xPercent: xPercent})
     requestAnimationFrame(animate);
     xPercent += 0.1 * direction;
   }

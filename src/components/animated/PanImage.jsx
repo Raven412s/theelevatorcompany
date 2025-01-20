@@ -23,21 +23,23 @@ const PanImage = () => {
         })
     })
   return (
-    <div id="about" className='min-h-screen w-screen'>
-        <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-            <h2 className="font-general text-sm uppercase md:text-[10px]"></h2>
-            <AnimatedTitle title={"<b>T</b>he Eleva<b>t</b>or <br /> C<b>o</b>mpany"} containerClass={"mt-5 !text-black text-center"} />
-            <div className="about-subtext">
-               <p></p>
-               <p></p>
-            </div>
-        </div>
-        <div className="h-dvh w-screen" id="clip">
-            <div className="mask-clip-path about-image">
-                <img src="/images/interior/2.jpg" alt="background" className='absolute left-0 top-0 size-full object-cover ' />
-            </div>
+<div id="about" className='min-h-screen w-screen'>
+    <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
+        <h2 className="font-general text-sm uppercase md:text-[10px]">
+        <AnimatedTitle title={"<b>T</b>he Eleva<b>t</b>or <br /> C<b>o</b>mpany"} containerClass={"mt-5 !text-black text-center"} />
+        </h2>
+        <div className="about-subtext">
+            <p>Leading the industry with innovative and reliable elevator solutions.</p>
+            <p>Tailored systems ensuring efficiency, safety, and seamless mobility.</p>
         </div>
     </div>
+    <div className="h-dvh w-screen" id="clip">
+        <div className="mask-clip-path about-image">
+            <img src="/images/interior/2.jpg" alt="background" className='absolute left-0 top-0 size-full object-cover ' />
+        </div>
+    </div>
+</div>
+
   )
 }
 

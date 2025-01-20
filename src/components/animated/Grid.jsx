@@ -2,61 +2,48 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-export const BentoTilt = ({ children, className = "" }) => {
-  const itemRef = useRef(null);
 
-  useEffect(() => {
+export const BentoTilt = ({ children, className = "" }) => {
+    const itemRef = useRef(null);
+
     const handleMouseMove = (e) => {
       if (!itemRef.current) return;
+
       const { left, top, width, height } = itemRef.current.getBoundingClientRect();
-      const relativeX = (e.clientX - left) / width;
-      const relativeY = (e.clientY - top) / height;
+      const relativeX = (e.clientX - left) / width; // Normalize X coordinate
+      const relativeY = (e.clientY - top) / height; // Normalize Y coordinate
 
-      const tiltX = (relativeY - 0.5) * 15;
-      const tiltY = (relativeX - 0.5) * -15;
+      const tiltX = (relativeY - 0.5) * 20; // Tilt strength along X-axis
+      const tiltY = (relativeX - 0.5) * -20; // Tilt strength along Y-axis
 
-      gsap.to(itemRef.current, {
-        duration: 0.3,
-        rotationX: tiltX,
-        rotationY: tiltY,
-        scale: 0.9,
-        transformOrigin: 'center center',
-        ease: 'power3.out',
-      });
+      itemRef.current.style.transform = `
+        perspective(1000px)
+        rotateX(${tiltX}deg)
+        rotateY(${tiltY}deg)
+        scale(1.05)
+      `;
     };
 
     const handleMouseLeave = () => {
-      gsap.to(itemRef.current, {
-        duration: 0.3,
-        rotationX: 0,
-        rotationY: 0,
-        scale: 1,
-        ease: 'power3.out',
-      });
+      if (!itemRef.current) return;
+      itemRef.current.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)";
     };
 
-    const currentRef = itemRef.current;
-    currentRef.addEventListener('mousemove', handleMouseMove);
-    currentRef.addEventListener('mouseleave', handleMouseLeave);
+    return (
+      <div
+        className={`relative transition-transform duration-300 z-40 ease-out ${className}`}
+        ref={itemRef}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {children}
+      </div>
+    );
+  };
 
-    return () => {
-      currentRef.removeEventListener('mousemove', handleMouseMove);
-      currentRef.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
 
-  return (
-    <div
-      className={className}
-      ref={itemRef}
-      style={{ transformStyle: 'preserve-3d' }}
-    >
-      {children}
-    </div>
-  );
-};
-
-const BentoCard = ({ src, title, description }) => {
+  const BentoCard = ({ src, title, description }) => {
     return (
       <div className="relative size-full">
         {src.endsWith('.mp4') ? (
