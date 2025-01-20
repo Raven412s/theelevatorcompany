@@ -14,7 +14,7 @@ const Section1 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <BentoTilt>
                 <div
-                  className="rounded-lg h-[19rem]"
+                  className="rounded-lg h-[19rem] lg:!h-[35rem]"
                   style={{
                       backgroundImage: `url('/images/interior/3.jpg')`,
                       backgroundRepeat: 'no-repeat',
