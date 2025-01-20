@@ -1,7 +1,5 @@
 "use client";
-import React, { useRef, useState, useEffect } from 'react';
-import { gsap } from 'gsap';
-
+import { useRef } from 'react';
 
 export const BentoTilt = ({ children, className = "" }) => {
     const itemRef = useRef(null);
@@ -61,11 +59,11 @@ export const BentoTilt = ({ children, className = "" }) => {
             className="absolute left-0 top-0 size-full object-cover object-center transition-transform duration-300 ease-in-out transform scale-100 brightness-75 group-hover:scale-105 group-hover:brightness-100"
           />
         )}
-        <div className="relative z-10 size-full flex-col flex justify-between p-5 text-north-50">
+        <div className="relative z-10 size-full flex-col flex justify-between md:!p-2 !p-1 text-north-50">
           <div>
-            <h1 className="bento-title special-font">{title}</h1>
+            <h1 className="bento-title special-font md:!text-4xl  !text-2xl">{title}</h1>
             {description && (
-              <p className="mt-3 max-w-64 text-xs md:text-base">{description}</p>
+              <p className="mt-3 max-w-64 text-xs md:!text-[0.8rem] ">{description}</p>
             )}
           </div>
         </div>

@@ -18,7 +18,7 @@ export default function index() {
     return (
         <motion.div style={{y}} ref={container} className={styles.contact}>
             <div className={styles.body}>
-                <div className={styles.title}>
+                <div className={`${styles.title} `}>
                     <span>
                         <div className={styles.imageContainer}>
                             <Image
@@ -28,11 +28,11 @@ export default function index() {
                             />
                         </div>
                         <h2>Let's work</h2>
-                    </span>
                     <h2>together</h2>
+                    </span>
                     <motion.div style={{x}} className={styles.buttonContainer}>
-                        <Rounded  backgroundColor={"#fefdb9"} className={styles.button}>
-                            <p>Get in touch</p>
+                        <Rounded  backgroundColor={"#fefdb9"} className={`${styles.button} md:!w-[80px] md:!h-[80px]`}>
+                            <p>Get Quotation</p>
                         </Rounded>
                     </motion.div>
                     <motion.svg style={{rotate, scale: 2}} width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,42 +40,44 @@ export default function index() {
                     </motion.svg>
                 </div>
                 <div className={styles.nav}>
-                        <Rounded>
-                            <p>info@theelevatorcompany.com</p>
-                        </Rounded>
-                        <Rounded>
-                            <p>+912323232323</p>
-                        </Rounded>
-                </div>
-                <div className={styles.info}>
-                    <div>
-                        <span>
-                            <h3>Version</h3>
-                            <p>2022 © Edition</p>
-                        </span>
-                        <span>
-                            <h3>Version</h3>
-                            <p>11:49 PM GMT+5</p>
-                        </span>
-                    </div>
-                    <div>
-                        <span>
-                            <h3>socials</h3>
-                            <Magnetic>
-                                <p>email</p>
-                            </Magnetic>
-                        </span>
-                        <Magnetic>
-                            <p>Instagram</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>WhatsApp</p>
-                        </Magnetic>
-                        <Magnetic>
-                            <p>Linkedin</p>
-                        </Magnetic>
-                    </div>
-                </div>
+    <Rounded>
+        <p>info@theelevatorcompany.com</p>
+    </Rounded>
+    <Rounded>
+        <p>+912323232323</p>
+    </Rounded>
+</div>
+<div className={`${styles.info} flex flex-col gap-8 md:flex-row`}>
+    <div className="w-full flex flex-col md:gap-4">
+        <span>
+            <h3>Version</h3>
+            <p>2025 © Edition</p>
+        </span>
+        <span>
+            <h3>Time</h3>
+            <p>11:49 PM GMT+5</p>
+        </span>
+    </div>
+    <div className="flex flex-col gap-6 md:flex-row md:items-start">
+        <span>
+            <h3>Socials</h3>
+        </span>
+        <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+            <Magnetic>
+                <p>Email</p>
+            </Magnetic>
+            <Magnetic>
+                <p>Instagram</p>
+            </Magnetic>
+            <Magnetic>
+                <p>WhatsApp</p>
+            </Magnetic>
+            <Magnetic>
+                <p>LinkedIn</p>
+            </Magnetic>
+        </div>
+    </div>
+</div>
             </div>
         </motion.div>
     )

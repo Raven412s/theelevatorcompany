@@ -9,12 +9,12 @@ const Section1 = () => {
         backgroundImage: "url()"
     }}
     >
-      <div className="grid gap-6 p-4 max-w-6xl h-screen mx-auto">
+      <div className="grid gap-6  p-4 max-w-6xl  mx-auto">
         {/* Hero Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-[70vh]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <BentoTilt>
                 <div
-                  className="rounded-lg h-full"
+                  className="rounded-lg h-[19rem]"
                   style={{
                       backgroundImage: `url('/images/interior/3.jpg')`,
                       backgroundRepeat: 'no-repeat',
@@ -23,8 +23,8 @@ const Section1 = () => {
                       backgroundPosition: 'top',
                   }}
                   >
-                  <strong className="flex items-center justify-center h-full text-3xl md:text-5xl lg:text-6xl text-white pb-10 prime uppercase">
-                    <AnimatedText phrase={"crafting precision for elevators"} />
+                  <strong className="flex items-end justify-center h-full text-3xl md:text-5xl lg:text-6xl text-white pb-10 prime uppercase">
+                    <AnimatedText className={""} phrase={"crafting precision for elevators"} />
                   </strong>
                 </div>
               </BentoTilt>

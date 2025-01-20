@@ -28,6 +28,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         opacity: 0, // Fade out
         duration: 1,
         delay: 0, // Delay to allow heartbeat effect to finish
+        zIndex: -1000,
         onComplete: () => {
           // After fading out, show the main content
           const content = document.getElementById('main-content')

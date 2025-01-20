@@ -3,7 +3,7 @@ import { useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
 
-export default function AnimatedText({ phrase }) {
+export default function AnimatedText({ phrase, className }) {
   const refs = useRef([]); // Array to store references to letters
 
   // Function to split words into `p` elements containing letters
@@ -11,7 +11,7 @@ export default function AnimatedText({ phrase }) {
     refs.current = []; // Clear refs on every render to avoid duplicates
     return phrase.split(' ').map((word, wordIndex) => (
       <p
-        className="text-[3.5vw] m-0 mr-[1.5vw] font-semibold text-white"
+        className={`text-[3.5vw] m-0 mr-[1.5vw] font-semibold text-white ${className}`}
         key={`word_${wordIndex}`}
       >
         {splitLetters(word)}

@@ -19,14 +19,12 @@
         .title{
             border-bottom: 1px solid rgb(134, 134, 134);
             padding-bottom: 100px;
-            margin-left: 200px;
-            margin-right: 200px;
             position: relative;
             span{
                 display: flex;
                 align-items: center;
                 .imageContainer{
-                    width: 100px;
+                    width: fit-content;
                     height: 100px;
                     position: relative;
                     border-radius: 50%;
@@ -49,6 +47,9 @@
                 position: absolute;
                 left: calc(100% - 400px);
                 top: calc(100% - 75px);
+                @media (max-width: 600px) {
+                    top: calc(100% - 56px)
+                }
             }
             .button{
                 width: 180px;
@@ -62,6 +63,14 @@
                 justify-content: center;
                 font-weight: 800;
                 cursor: pointer;
+                @media (max-width: 768px) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+                @media (max-width: 600px) {
+                    width: 7rem;
+                    height: 7rem;
+                }
                 p{
                     margin: 0px;
                     font-size: 16px;
@@ -73,7 +82,7 @@
             svg{
                 position: absolute;
                 top: 30%;
-                left: 100%;
+                left: 80%;
             }
         }
         .nav{
@@ -82,16 +91,23 @@
             margin-top: 100px;
             margin-left: 200px;
             margin-right: 200px;
+            @media (max-width: 600px) {
+                margin: 0;
+                margin-top: 30%;
+            }
         }
         .info{
             display: flex;
-            justify-content: space-between;
-            margin-top: 100px;
+            justify-content: start;
+            margin-top: 80px;
             padding: 20px;
             div{
                 display: flex;
+                flex-direction: row;
+                width: 100%;
                 gap: 10px;
-                align-items: flex-end;
+                align-items: center;
+                justify-content: center;
                 p, h3{
                     margin: 0px;
                     padding: 2.5px;

@@ -22,7 +22,7 @@ export default function RootLayout({
         suppressContentEditableWarning
       >
         <Navbar/>
-        <GetQuote/>
+        {/* <GetQuote/> */}
         {children}
         <Contact/>
       </body>

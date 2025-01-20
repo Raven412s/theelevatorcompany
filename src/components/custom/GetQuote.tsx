@@ -32,7 +32,7 @@ export default function GetQuote() {
   return (
     <>
       <div
-        className="fixed-top-right top-7 right-8 fixed z-[9999] text-white rounded-lg flex items-center justify-center shadow-lg transition-transform"
+        className="fixed-top-right top-7 right-5 fixed z-[9999] text-white rounded-lg flex items-center justify-center shadow-lg transition-transform"
         style={{
           transform: `translateY(${offsetTop}px)`,
         }}
