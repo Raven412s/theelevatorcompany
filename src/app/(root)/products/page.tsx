@@ -1,9 +1,12 @@
-import Image from "next/image";
+import ProductsPage from '@/components/ProductsPage'
+import React from 'react'
 
-export default function page() {
+const page = () => {
   return (
-    <div className="flex items-center h-screen  justify-center text-5xl">
-    <h1>Products Page</h1>
+    <div className='mb-20'>
+        <ProductsPage/>
     </div>
-  );
+  )
 }
+
+export default page

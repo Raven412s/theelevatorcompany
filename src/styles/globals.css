@@ -132,7 +132,7 @@ element{
     }
 
     .nav-hover-btn {
-      @apply relative ms-10 font-general text-xs uppercase text-north-50 after:absolute
+      @apply relative ms-10 font-general text-xs uppercase  after:absolute
     }
 
     .nav-hover-btn::after{

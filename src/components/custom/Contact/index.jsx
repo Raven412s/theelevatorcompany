@@ -55,11 +55,11 @@ export default function index() {
             <p>11:49 PM GMT+5</p>
         </span>
     </div>
-    <div className="flex flex-col gap-6 md:flex-row md:items-start">
+    <div className="!flex !flex-col !gap-6  md:flex-row md:!items-start">
         <span>
             <h3>Socials</h3>
         </span>
-        <div className="flex flex-col gap-4 sm:flex-row sm:gap-6">
+        <div className="flex gap-4 sm:flex-row items-start justify-start sm:gap-6">
             <Magnetic>
                 <p>Email</p>
             </Magnetic>

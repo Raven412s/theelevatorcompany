@@ -1,22 +1,21 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import Button from "./Button";
-import { TiLocationArrow } from "react-icons/ti";
-import { useWindowScroll } from "react-use";
+import Rounded from "@/components/common/RoundedButton";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Shadcn's Sheet
 import gsap from "gsap";
 import Link from "next/link";
-import Rounded from "@/components/common/RoundedButton";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"; // Shadcn's Sheet
-import GetQuote from "./custom/GetQuote";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { TiLocationArrow } from "react-icons/ti";
+import { useWindowScroll } from "react-use";
 
 const navItems = ["Customizations-and-Range", "About"];
 
 const Navbar = () => {
   const navContainerRef = useRef<HTMLDivElement>(null);
-
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const { y: currentScrollY } = useWindowScroll();
+const router = useRouter()
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -41,6 +40,9 @@ const Navbar = () => {
     });
   }, [isNavVisible]);
 
+  const handleProductsClick=()=>{
+    router.push('/products')
+  }
   return (
     <div
       ref={navContainerRef}
@@ -78,7 +80,7 @@ const Navbar = () => {
                   </Link>
                 ))}
                 <Rounded>
-                  <p className="flex gap-3 items-center justify-start">
+                  <p onClick={handleProductsClick} className="flex gap-3 items-center justify-start">
                     Products <TiLocationArrow />
                   </p>
                 </Rounded>
@@ -97,7 +99,7 @@ const Navbar = () => {
               />
             </a>
             <Rounded>
-              <p className="flex gap-3 !max-w-max items-center justify-start">
+              <p onClick={handleProductsClick} className="flex gap-3 !max-w-max items-center justify-start">
                 Products <TiLocationArrow />
               </p>
             </Rounded>
