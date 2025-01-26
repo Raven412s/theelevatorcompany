@@ -1,5 +1,5 @@
 "use client";
-import Rounded from "@/components/common/RoundedButton";
+import Rounded from "@/components/common/RoundedButton/index";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"; // Shadcn's Sheet
 import gsap from "gsap";
 import Link from "next/link";

@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/hero-reveal/Hero.tsx", "src/app/not-found.js", "src/components/custom/InfiniteText/InfiniteText.jsx", "src/components/Navbar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/hero-reveal/Hero.tsx", "src/app/not-found.js", "src/components/custom/InfiniteText/InfiniteText.tsx", "src/components/Navbar.tsx"],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,4 @@
-import GetQuote from "@/components/custom/GetQuote";
-import Contact from '@/components/custom/Contact'
+import Contact from '@/components/custom/Contact/index';
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
