@@ -33,9 +33,9 @@ const Section3 = () => {
         <div className="relative">
         <CardParallax/>
         </div>
-        {/* <div className="block lg:hidden">
+        <div className="block lg:hidden">
             <USP/>
-        </div> */}
+        </div>
 
     </>
   )

@@ -43,7 +43,7 @@ const Card: FC<CardProps> = ({
 
   return (
     <div ref={container} className={`${styles.cardContainer}`}>
-        
+
       <motion.div
         id="dev"
         style={{
@@ -84,7 +84,7 @@ const Card: FC<CardProps> = ({
           </div>
                 </div>
 
-          <div className={`${styles.imageContainer}`}>
+          <div className={`${styles.imageContainer} lg:w-50%`}>
             <motion.div
               className={`${styles.inner} !relative`}
               style={{ scale: imageScale }}
