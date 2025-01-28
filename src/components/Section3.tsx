@@ -30,7 +30,7 @@ const Section3 = () => {
 
   return (
     <>
-        <div className="relative">
+        <div className="hidden lg:block relative">
         <CardParallax/>
         </div>
         <div className="block lg:hidden">
