@@ -39,7 +39,7 @@ const USP: React.FC<Props> = () => {
   return (
     <>
           <div className="text-center mt-24">
-        <h2 className="text-7xl font-bold mb-8 font-Style-Script underline-offset-[1rem] underline">What Makes Us Different</h2>
+        <h2 className="font-bold mb-8 font-Style-Script lg:text-8xl text-4xl underline-offset-[1rem] underline">What Makes Us Different</h2>
       </div>
       <Line gap="mt-12" />
       <ScrollBasedMarquee
