@@ -49,14 +49,14 @@ const Card: FC<CardProps> = ({
         style={{
           backgroundColor: color,
           scale,
-          top: `calc(-5vh + ${i * 6}rem)`,
+          top: `calc(-5vh + ${i * 4}rem)`,
           color: textColor,
         }}
-        className={`${styles.card} !w-[1700px] py-8 !h-fit project-card`}
+        className={`${styles.card} !w-[1700px]  !h-fit project-card`}
       >
-        <h2 >{title}</h2>
+        <h2 className='!font-bold'>{title}</h2>
         <div className={`${styles.body} lg:flex-row flex-col-reverse w-full`}>
-                <div className="flex flex-col gap-20">
+                <div className="flex flex-col gap-12">
                 <ul className="flex lg:!flex-row flex-col lg:gap-8 gap-2 list-disc pl-4" >
               {keyUsp.map((usp, index) => (
                 <li key={index} className='min-w-max text-xl'>{usp}</li>
@@ -84,7 +84,7 @@ const Card: FC<CardProps> = ({
           </div>
                 </div>
 
-          <div className={`${styles.imageContainer} lg:w-50%`}>
+          <div className={`${styles.imageContainer} lg:!w-50%`}>
             <motion.div
               className={`${styles.inner} !relative`}
               style={{ scale: imageScale }}
