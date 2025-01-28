@@ -40,7 +40,7 @@ export default function CardParallax() {
 
   return (
     <main ref={container} className="py-[15rem] sticky top-[25%] ">
-        <h2 className={`text-center text-golden-400 absolute top-10 w-full text-8xl font-bold`}>What Makes Us Different</h2>
+        <h2 className={`text-center text-golden-400 absolute top-10 w-full lg:text-8xl text-4xl font-bold`}>What Makes Us Different</h2>
       {umbrellaPoints.map((usp: usp, i: number) => {
         const targetScale = 1 - (umbrellaPoints.length - i) * 0.01;
         return (
