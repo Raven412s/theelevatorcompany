@@ -51,7 +51,7 @@ export default function ProductsPage() {
   ];
 
   return (
-    <div className="w-full min-h-screen bg-[#141516]">
+    <div className="w-full min-h-screen ">
       <GetQuote />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-yellow-200 via-golden-400 to-[#141516] py-16 px-8 text-center">

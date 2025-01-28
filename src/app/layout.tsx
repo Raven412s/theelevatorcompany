@@ -1,4 +1,5 @@
 import Contact from '@/components/custom/Contact/index';
+import NavFooterWrapper from '@/components/HOC/NavFooterWrapper';
 import Navbar from "@/components/Navbar";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -20,10 +21,9 @@ export default function RootLayout({
         suppressHydrationWarning
         suppressContentEditableWarning
       >
-        <Navbar/>
-        {/* <GetQuote/> */}
-        {children}
-        <Contact/>
+        <NavFooterWrapper>
+            {children}
+        </NavFooterWrapper>
       </body>
     </html>
   );

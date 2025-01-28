@@ -1,6 +1,7 @@
 import React from 'react';
 import AnimatedText from './animated/AnimatedText';
 import { BentoTilt } from './animated/Grid';
+import Image from 'next/image';
 
 const Section1 = () => {
   return (
@@ -14,16 +15,10 @@ const Section1 = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
             <BentoTilt>
                 <div
-                  className="rounded-lg h-[19rem] lg:!h-[35rem]"
-                  style={{
-                      backgroundImage: `url('/images/interior/3.jpg')`,
-                      backgroundRepeat: 'no-repeat',
-                      backgroundSize: 'cover',
-                      backgroundOrigin: 'top',
-                      backgroundPosition: 'top',
-                  }}
-                  >
-                  <strong className="flex items-end justify-center h-full text-3xl md:text-5xl lg:text-6xl text-white pb-10 prime uppercase">
+                  className="rounded-lg h-[19rem] lg:!h-[41.5rem]  ">
+                    {/* <Image src={'/images/product/felix.jpg'} alt='Felix - The Elevator Company' width={500} height={500} className='object-cover rounded-[2rem] repeat-0 object-center origin-top size-full absolute top-0 left-0 -z-10 blur-[2px] brightness-50'/> */}
+                    <Image src={'/images/product/felix.jpg'} alt='Felix - The Elevator Company' width={500} height={500} className='object-contain rounded-[2rem] repeat-0 object-center origin-top  absolute top-0 left-1/2 -translate-x-1/2 z-[-8] brightness-90 '/>
+                  <strong className="flex items-end justify-center h-full text-3xl md:text-5xl ml20 lg:text-6xl text-white pb-10 prime uppercase absolute left-12 bottom-10">
                     <AnimatedText className={""} phrase={"crafting precision for elevators"} />
                   </strong>
                 </div>

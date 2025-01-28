@@ -1,12 +1,17 @@
 "use client";
 import { useRef, useEffect } from "react";
+import { types } from "util";
 
 interface MouseEvent {
   movementY: number;
   clientX: number;
 }
 
-export default function Line() {
+type lineProps = {
+    gap?: string
+}
+
+export default function Line({gap}:lineProps) {
   // Define a reference to an SVGPathElement
   const path = useRef<SVGPathElement>(null);
 
@@ -98,7 +103,7 @@ export default function Line() {
   };
 
   return (
-    <div className="flex flex-col items-end w-full">
+    <div className={`flex flex-col items-end w-full ${gap}`}>
       <div className="relative w-full h-px mb-5">
         <div
           onMouseEnter={() => {

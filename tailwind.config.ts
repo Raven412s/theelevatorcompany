@@ -109,7 +109,10 @@ module.exports = {
             general: ['general', 'sans-serif'],
             'circular-web' : ['circular-web', 'sans-serif'],
             'robert-medium': ['robert-medium', 'sans-serif'],
-            'robert-regular': ['robert-regular', 'sans-serif']
+            'robert-regular': ['robert-regular', 'sans-serif'],
+            'Great-Vibes': ['Great-Vibes', 'sans-serif'],
+            'Satisfy': ['Satisfy', 'sans-serif'],
+            'Style-Script': ['Style-Script', 'sans-serif'],
         },
         transitionTimingFunction: {
             'custom-ease': 'cubic-bezier(0.65, 0.05, 0.36, 1)',

@@ -5,9 +5,9 @@ import LineContent1 from './LineContent1'
 function LineWDets1() {
   return (
     <>
-    <Line/>
+    <Line gap='my-2' />
      <LineContent1/>
-    <Line/>
+    <Line gap='my-2' />
     </>
   )
 }
