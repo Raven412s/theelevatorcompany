@@ -45,7 +45,7 @@ export default function ProductsPage() {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-4">
-                    <h4 className="text-xl font-semibold text-yellow-400">{lift.name}</h4>
+                    <h4 className="text-xl font-semibold text-yellow-400">{lift.name.replace(/-/g, ' ')}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {lift.features.map((feature, idx) => (
@@ -80,7 +80,7 @@ export default function ProductsPage() {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-4">
-                    <h4 className="text-xl font-semibold text-yellow-400">{lift.name}</h4>
+                  <h4 className="text-xl font-semibold text-yellow-400">{lift.name.replace(/-/g, ' ')}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {lift.features.map((feature, idx) => (
