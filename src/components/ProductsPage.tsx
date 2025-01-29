@@ -3,7 +3,6 @@ import GetQuote from "@/components/custom/GetQuote";
 import { Button } from "@/components/ui/button";
 import { commercialLifts, luxuryHomeLifts } from "@/data";
 import { Lift } from "@/types";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function ProductsPage() {
