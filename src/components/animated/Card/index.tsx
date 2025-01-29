@@ -40,7 +40,7 @@ const Card: FC<CardProps> = ({
           color: textColor,
           boxShadow: `${color} 0px 30px 400px`,
         }}
-        className={`${styles.card} !w-[1700px]  !h-fit project-card`}
+        className={`${styles.card} !min-w-[1400px] !max-w-[1700px]  !h-fit project-card`}
       >
         <h2 className='!font-bold'>{title}</h2>
         <div className={`${styles.body} lg:flex-row flex-col-reverse w-full`}>
