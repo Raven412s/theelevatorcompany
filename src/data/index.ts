@@ -180,7 +180,7 @@ export const images: string[] = [
       productDescription:
         "An advanced version of the Felix lift with cutting-edge belt-drive technology for improved performance and durability.",
       productFeatures: [
-        "Compliance: Meets European Machinery Directive 2006/42/EC",
+        "Compliance: Meets European Machinery Directive",
         "Mechanism: Gearless Traction Mechanism",
         "Speed: 0.4-1m/s",
         "Compatible with single-phase power",
@@ -197,7 +197,7 @@ export const images: string[] = [
       productDescription:
         "A compact lift designed for indoor and outdoor staircases, ensuring accessibility for every space.",
       productFeatures: [
-        "Compliance: Meets European Machinery Directive 2006/42/EC",
+        "Compliance: Meets European Machinery Directive",
         "Mechanism: Rack and Pinion Mechanism",
         "Smooth operating speed of 0.10 - 0.15 m/s",
         "Compatible with single-phase power",

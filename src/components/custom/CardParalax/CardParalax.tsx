@@ -31,7 +31,7 @@ export default function CardParallax() {
   }, []);
 
   return (
-    <main ref={container} className="py-[15rem] sticky top-[25%] flex flex-col w-full mx-auto ">
+    <main ref={container} className="py-[15rem] sticky top-[25%] flex flex-col w-full items-center ">
       {umbrellaPoints.map((usp: usp, i: number) => {
         const targetScale = 1 - (umbrellaPoints.length - i) * 0.01;
         return (
