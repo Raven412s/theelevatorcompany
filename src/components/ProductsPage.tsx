@@ -15,24 +15,13 @@ export default function ProductsPage() {
   return (
     <div className="w-full min-h-screen ">
       <GetQuote />
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-yellow-200 via-golden-400 to-[#141516] py-16 px-8 text-center">
-        <h1 className="text-4xl font-bold mb-4">Our Elevators & Solutions</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          Explore our range of elevators tailored to luxury homes and commercial spaces, designed to meet every need.
-        </p>
-        <Button className="mt-6 px-6 py-3 bg-white text-blue-600 rounded-lg shadow-md">
-          Explore Products
-        </Button>
-      </section>
-
       {/* Product Categories */}
-      <section className="py-12 px-8 bg-[#141516]">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">Product Categories</h2>
+      <section className="py-12 px-8 bg-[#141516] flex flex-col items-center gap-4">
+        <h2 className="text-3xl font-bold text-center mb-8 text-golden-400 gold-hover-btn ">Product Categories</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Luxury Home Lifts */}
           <div className="bg-gradient-to-bl from-gray-800 via-gray-900 to-black rounded-lg p-6 shadow-md">
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Luxury Home Lifts</h3>
+            <h3 className="text-2xl font-bold mb-4 text-golden-400 gold-hover-btn ">Luxury Home Lifts</h3>
             <p className="text-gray-300 mb-6">
               Elevate your living experience with our range of luxury home lifts. Designed for style, comfort, and performance.
             </p>
@@ -45,7 +34,7 @@ export default function ProductsPage() {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-4">
-                    <h4 className="text-xl font-semibold text-yellow-400">{lift.name.replace(/-/g, ' ')}</h4>
+                    <h4 className="text-xl font-semibold text-golden-400 gold-hover-btn ">{lift.name.replace(/-/g, ' ')}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {lift.features.map((feature, idx) => (
@@ -67,7 +56,7 @@ export default function ProductsPage() {
 
           {/* Commercial Lifts */}
           <div className="bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-lg p-6 shadow-md">
-            <h3 className="text-2xl font-bold mb-4 text-yellow-400">Commercial Lifts</h3>
+            <h3 className="text-2xl font-bold mb-4 text-golden-400 gold-hover-btn ">Commercial Lifts</h3>
             <p className="text-gray-300 mb-6">
               Optimize your building's efficiency with our robust and reliable commercial elevators, built to last.
             </p>
@@ -80,7 +69,7 @@ export default function ProductsPage() {
                     className="w-full h-40 object-cover"
                   />
                   <div className="p-4">
-                  <h4 className="text-xl font-semibold text-yellow-400">{lift.name.replace(/-/g, ' ')}</h4>
+                  <h4 className="text-xl font-semibold text-golden-400 gold-hover-btn ">{lift.name.replace(/-/g, ' ')}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {lift.features.map((feature, idx) => (

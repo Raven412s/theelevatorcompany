@@ -161,6 +161,14 @@ element{
         transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
     }
 
+    .gold-hover-btn {
+      @apply relative max-w-max mb-2  uppercase  after:absolute
+    }
+
+    .gold-hover-btn::after{
+        @apply -bottom-0.5 left-0 h-[2px] w-full origin-bottom-right scale-x-0 bg-golden-400 transition-transform duration-300 hover:origin-bottom-left hover:scale-x-100 dark:bg-golden-400 cursor-pointer;
+        transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
 
     .floating-nav {
       @apply bg-black rounded-lg border-golden-400;
