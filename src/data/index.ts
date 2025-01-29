@@ -163,7 +163,7 @@ export const images: string[] = [
       productDescription:
         "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
       productFeatures: [
-        "Compliance: Meets European Machinery Directive 2006/42/EC",
+        "Compliance: Meets European Machinery Directive",
         "Mechanism: Hydraulic with a smooth operating speed of 0.3 - 0.5 m/s",
         "Compatible with single-phase power",
         "Number of Stops: Upto 6 stops",

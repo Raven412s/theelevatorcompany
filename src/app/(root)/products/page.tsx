@@ -95,6 +95,7 @@ const Page = () => {
               {/* Render Product Page */}
       <ProductsPage />
     </section>
+    <div className="flex h-screen "></div>
     </div>
   );
 };
