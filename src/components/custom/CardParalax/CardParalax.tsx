@@ -4,16 +4,8 @@ import Card from '@/components/animated/Card/index';
 import { useScroll, MotionValue } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
+import { usp } from '@/types';
 
-interface usp {
-  link: string;
-  title: string;
-  description: string;
-  src: string;
-  color: string;
-  text: string;
-  keyUSPs: string[]
-}
 
 export default function CardParallax() {
   const container = useRef<HTMLDivElement | null>(null);

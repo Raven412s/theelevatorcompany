@@ -1,15 +1,8 @@
 "use client";
 
+import { ScrollBasedMarqueeProps } from "@/types";
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-
-type ScrollBasedMarqueeProps = {
-  logos?: string[];
-  text?: string | string[];
-  gap?: number; // Gap between elements
-  direction?: "left" | "right"; // New parameter for scroll direction
-  componentClass: string;
-};
 
 const ScrollBasedMarquee: React.FC<ScrollBasedMarqueeProps> = ({
   componentClass,

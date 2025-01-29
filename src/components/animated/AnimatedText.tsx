@@ -2,11 +2,7 @@
 import { useRef, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import gsap from 'gsap';
-
-interface AnimatedTextProps {
-  phrase: string;
-  className?: string;
-}
+import { AnimatedTextProps } from '@/types';
 
 export default function AnimatedText({ phrase, className = '' }: AnimatedTextProps) {
   const refs = useRef<HTMLSpanElement[]>([]); // Store references to individual letters

@@ -1,6 +1,7 @@
 import PanImage from '@/components/animated/PanImage';
 import GetQuote from '@/components/custom/GetQuote';
 import SmoothScroll from "@/components/custom/SmoothParrallax/page";
+import Testimonials from '@/components/custom/Testimonials';
 import Hero from "@/components/hero-reveal/Hero";
 import LineWDets1 from "@/components/LineWDets1";
 import Section1 from "@/components/Section1";
@@ -18,6 +19,7 @@ export default function Home() {
       <PanImage/>
       <Section2/>
       <Section3/>
+      <Testimonials/>
       <div className="flex h-screen "></div>
     </div>
   );

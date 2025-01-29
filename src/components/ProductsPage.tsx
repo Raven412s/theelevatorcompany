@@ -1,54 +1,17 @@
+"use client"
 import GetQuote from "@/components/custom/GetQuote";
 import { Button } from "@/components/ui/button";
+import { commercialLifts, luxuryHomeLifts } from "@/data";
+import { Lift } from "@/types";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function ProductsPage() {
-  const luxuryHomeLifts = [
-    {
-      name: "Felix",
-      image: "/images/luxury/felix.jpg",
-      description: "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
-      features: ["Smooth ride", "Customizable interiors", "Compact design"],
-    },
-    {
-      name: "Felix 2.0",
-      image: "/images/luxury/felix2.png",
-      description: "An upgraded version of Felix with advanced safety features and enhanced capacity.",
-      features: ["Enhanced safety", "Greater load capacity", "Eco-friendly technology"],
-    },
-    {
-      name: "Climber X",
-      image: "/images/luxury/climberx.png",
-      description: "Engineered for luxury homes, combining aesthetics with high performance.",
-      features: ["Aesthetic appeal", "High-speed motor", "Advanced control system"],
-    },
-    {
-      name: "Pneumatic Vacuum",
-      image: "/images/luxury/pneumatic.jpg",
-      description: "A revolutionary design with no cables or pulleys, perfect for compact spaces.",
-      features: ["Space-saving", "Modern technology", "Easy installation"],
-    },
-  ];
+    const router = useRouter()
 
-  const commercialLifts = [
-    {
-      name: "Elivio",
-      image: "/images/commercial/elivio.jpg",
-      description: "A reliable lift for commercial buildings with heavy usage and durability.",
-      features: ["High capacity", "Durable design", "Optimized for efficiency"],
-    },
-    {
-      name: "Elivio 2.0",
-      image: "/images/commercial/elivio2.jpg",
-      description: "An advanced version of Elivio with improved speed and safety.",
-      features: ["Faster operation", "Enhanced safety", "Smart monitoring"],
-    },
-    {
-      name: "Eleventra",
-      image: "/images/commercial/eleventra.jpg",
-      description: "Designed for high-rise buildings, offering exceptional performance and comfort.",
-      features: ["Comfortable ride", "High-speed elevator", "Advanced durability"],
-    },
-  ];
+    const handleClickForLearnMore = (lift: Lift)=>{
+        router.push(`/products/${lift.name.toLowerCase()}`)
+    }
 
   return (
     <div className="w-full min-h-screen ">
@@ -85,8 +48,17 @@ export default function ProductsPage() {
                   <div className="p-4">
                     <h4 className="text-xl font-semibold text-yellow-400">{lift.name}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
-                    <Button className="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500">
-                      Learn More
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {lift.features.map((feature, idx) => (
+                        <span key={idx} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    <Button
+                     onClick={() => handleClickForLearnMore(lift)}
+                     className="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500">
+                        Learn More
                     </Button>
                   </div>
                 </div>
@@ -111,8 +83,17 @@ export default function ProductsPage() {
                   <div className="p-4">
                     <h4 className="text-xl font-semibold text-yellow-400">{lift.name}</h4>
                     <p className="text-sm text-gray-300 mb-4">{lift.description}</p>
-                    <Button className="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500">
-                      Learn More
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {lift.features.map((feature, idx) => (
+                        <span key={idx} className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-700 text-gray-300">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    <Button
+                     onClick={() => handleClickForLearnMore(lift)}
+                     className="px-4 py-2 bg-yellow-400 text-black rounded-md hover:bg-yellow-500">
+                        Learn More
                     </Button>
                   </div>
                 </div>

@@ -1,26 +1,7 @@
 'use client';
+import { slides } from '@/data';
 import { useEffect, useState } from 'react';
 
-const slides = [
-    {
-        id: 1,
-        image: '/images/parrallax/10.jpg',
-        title: 'Elevate with Precision',
-        subtitle: 'Delivering safe and reliable elevator solutions for modern buildings.',
-    },
-    {
-        id: 2,
-        image: '/images/parrallax/12.jpg',
-        title: 'Innovative Design',
-        subtitle: 'Crafting elevators that seamlessly integrate with your architecture.',
-    },
-    {
-        id: 3,
-        image: '/images/parrallax/8.jpg',
-        title: 'Empower Mobility',
-        subtitle: 'Enhancing vertical transportation with cutting-edge technology.',
-    }
-];
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);

@@ -1,10 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-
-interface MagneticWrapperProps {
-  children: React.ReactElement;
-}
+import { MagneticWrapperProps } from "@/types";
 
 const MagneticWrapper: React.FC<MagneticWrapperProps> = ({ children }) => {
   const magneticRef = useRef<HTMLDivElement>(null);

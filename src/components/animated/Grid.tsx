@@ -1,10 +1,7 @@
 "use client";
+import { BentoCardProps, BentoTiltProps } from "@/types";
 import { useRef } from "react";
 
-interface BentoTiltProps {
-  children: React.ReactNode;
-  className?: string;
-}
 
 export const BentoTilt = ({ children, className = "" }: BentoTiltProps) => {
   const itemRef = useRef<HTMLDivElement>(null);
@@ -46,11 +43,7 @@ export const BentoTilt = ({ children, className = "" }: BentoTiltProps) => {
   );
 };
 
-interface BentoCardProps {
-  src: string;
-  title: React.ReactNode; // Accept React elements or strings for the title
-  description?: string;
-}
+
 
 const BentoCard = ({ src, title, description }: BentoCardProps) => {
   const isVideo = src.endsWith(".mp4");

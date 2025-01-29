@@ -1,13 +1,7 @@
+import { ButtonProps } from '@/types';
 import React, { ReactNode } from 'react';
 
-interface ButtonProps {
-  id?: string;
-  title: string;
-  leftIcon?: ReactNode;
-  rightIcon?: ReactNode;
-  containerClass?: string;
-  onClick?: () => void;
-}
+
 
 const Button: React.FC<ButtonProps> = ({
   id,

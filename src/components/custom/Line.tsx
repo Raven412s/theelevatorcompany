@@ -1,15 +1,8 @@
 "use client";
+import { lineProps, MouseEvent } from "@/types";
 import { useRef, useEffect } from "react";
 import { types } from "util";
 
-interface MouseEvent {
-  movementY: number;
-  clientX: number;
-}
-
-type lineProps = {
-    gap?: string
-}
 
 export default function Line({gap}:lineProps) {
   // Define a reference to an SVGPathElement

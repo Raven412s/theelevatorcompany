@@ -6,22 +6,12 @@ import { ScrollTrigger } from 'gsap/all';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import styles from './page.module.scss';
+import { images } from '@/data';
+import { ColumnProps, Dimension } from '@/types';
 
-const images: string[] = [
-  '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg',
-  '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg',
-  '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg',
-];
 
-type Dimension = {
-  width: number;
-  height: number;
-};
 
-type ColumnProps = {
-  images: string[];
-  y: any; // The `useTransform` return type is `MotionValue<any>`
-};
+
 
 export default function SmoothScroll() {
   const gallery = useRef<HTMLDivElement | null>(null);

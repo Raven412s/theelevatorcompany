@@ -1,34 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import ScrollBasedMarquee from "@/components/custom/ScrollBasedMaruee/ScrollBasedMaruee";
 import Line from "@/components/custom/Line";
-import { motion } from "framer-motion";
+import ScrollBasedMarquee from "@/components/custom/ScrollBasedMaruee/ScrollBasedMaruee";
+import { features } from "@/data";
+import React from "react";
 
-type Props = {};
 
-const USP: React.FC<Props> = () => {
-    const features = [
-        "Italian designs",
-        "Vastu compliance",
-        "Customisable Cabins",
-        "Cost efficient",
-        "Low Energy Consumption",
-        "Innovative",
-        "Reliable",
-        "Efficient",
-        "Modern",
-        "Lift Automation",
-        "Tailored Solutions",
-        "Internationally certified",
-        "194 safety parameters",
-        "Tuv Sud Certified",
-        "Imported Machinery",
-        "Smooth and Quiet Operation",
-        "Flexibility in Installation",
-        "Space Saving Design",
-        "Voice Command Enabled",
-        "Safe for all Age"
-      ];
+
+const USP: React.FC = () => {
+
 
 
       const chunkSize = Math.ceil(features.length / 3);

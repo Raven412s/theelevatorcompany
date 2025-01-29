@@ -4,20 +4,7 @@ import styles from './style.module.scss';
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef, FC } from 'react';
 import "@/styles/globals.css";
-
-interface CardProps {
-  i: number;
-  title: string;
-  description: string;
-  keyUsp: string[];
-  src: string;
-  url: string;
-  color: string;
-  progress: any; // Adjust type as needed if the `progress` object has a specific type
-  range: [number, number];
-  targetScale: number;
-  textColor: string;
-}
+import { CardProps } from '@/types';
 
 const Card: FC<CardProps> = ({
   i,
@@ -51,6 +38,7 @@ const Card: FC<CardProps> = ({
           scale,
           top: `calc(-5vh + ${i * 4}rem)`,
           color: textColor,
+          boxShadow: `${color} 0px 30px 400px`,
         }}
         className={`${styles.card} !w-[1700px]  !h-fit project-card`}
       >

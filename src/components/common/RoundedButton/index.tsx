@@ -3,11 +3,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Magnetic from "../Magnetic";
 import styles from "./style.module.scss";
+import { AnimatedButtonProps } from "@/types";
 
-interface AnimatedButtonProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
-  backgroundColor?: string;
-}
 
 const Index: React.FC<AnimatedButtonProps> = ({
   children,

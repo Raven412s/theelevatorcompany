@@ -1,10 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-
-interface TemplateProps {
-  children: React.ReactNode;
-}
+import { TemplateProps } from '@/types';
 
 export default function Template({ children }: TemplateProps) {
   const logoRef = useRef<HTMLDivElement>(null);
