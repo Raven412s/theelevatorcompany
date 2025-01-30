@@ -37,20 +37,20 @@ export default function QuotationDrawer() {
               className="md:w-[38rem] md:h-[38rem] w-screen flex flex-col items-center  justify-center p-6"
             >
               <form className="w-full space-y-4 flex flex-col justify-between">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2 flex flex-col items-start md:w-full sm:w-[94%] sm:mr-6   ">
+                <div className="grid grid-cols-1 sm:grid-cols-1 gap-4">
+                  <div className="space-y-2 flex flex-col items-start md:w-full w-[88%] md:mr-6 !mr-10 ">
                     <Label htmlFor="fullName">Full Name</Label>
                     <Input id="fullName" placeholder="Enter your full name" required />
                   </div>
-                  <div className="space-y-2 flex flex-col items-start md:w-full sm:w-[94%] sm:mr-6  ">
+                  <div className="space-y-2 flex flex-col items-start md:w-full w-[88%] md:mr-6 !mr-10">
                     <Label htmlFor="email">Email</Label>
                     <Input id="email" type="email" placeholder="Enter your email" required />
                   </div>
-                  <div className="space-y-2 flex flex-col items-start md:w-full sm:w-[94%] sm:mr-6  ">
+                  <div className="space-y-2 flex flex-col items-start md:w-full w-[88%] md:mr-6 !mr-10">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input id="phone" type="tel" placeholder="Enter your phone number" required />
                   </div>
-                  <div className="space-y-2 flex flex-col items-start md:w-full sm:w-[94%] sm:mr-6  ">
+                  <div className="space-y-2 flex flex-col items-start md:w-full w-[88%] md:mr-6 !mr-10">
                     <Label htmlFor="floors">Number of Floors</Label>
                     <Select onValueChange={setFloorType}>
                       <SelectTrigger>
@@ -74,13 +74,13 @@ export default function QuotationDrawer() {
                       />
                     )}
                   </div>
-                  <div className="space-y-2 flex flex-col items-start md:w-full sm:w-[94%] sm:mr-6   sm:col-span-2">
+                  <div className="space-y-2 flex flex-col items-start md:w-full w-[88%] md:mr-6 !mr-10 sm:col-span-2">
                     <Label htmlFor="message">Message</Label>
                     <Textarea id="message" placeholder="Your message" rows={3} required />
                   </div>
                 </div>
 
-                <DrawerFooter className="!flex !flex-row gap-2 mt-4 justify-start md:w-full sm:w-[94%]">
+                <DrawerFooter className="!flex !flex-row gap-2 mt-4 justify-start md:w-full w-[88%]">
                   <Button type="submit" className="bg-golden-400/90 flex-1 hover:bg-golden-400">
                     Submit
                   </Button>
