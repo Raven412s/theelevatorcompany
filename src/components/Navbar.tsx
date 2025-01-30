@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
-
+import QuotationDrawer from "@/components/common/QutationDrawer"
 const navItems = ["Customizations-and-Range", "About"];
 
 const Navbar = () => {
@@ -46,7 +46,7 @@ const router = useRouter()
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0  top-4 z-50 h-16 px-4  border border-transparent !rounded-[1.2rem] transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0  top-4 z-50 h-16 px-4  border border-transparent !rounded-[1.2rem]  transition-all duration-700 sm:inset-x-6"
     >
          {/* Mobile Navigation */}
          <div className="flex lg:hidden relative">
@@ -84,6 +84,7 @@ const router = useRouter()
                     Products <TiLocationArrow />
                   </p>
                 </Rounded>
+                <QuotationDrawer/>
               </SheetContent>
             </Sheet>
           </div>
@@ -116,6 +117,7 @@ const router = useRouter()
                 {item}
               </Link>
             ))}
+            <QuotationDrawer/>
           </div>
 
 
