@@ -8,7 +8,8 @@ import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
 import { useWindowScroll } from "react-use";
 import QuotationDrawer from "@/components/common/QutationDrawer"
-const navItems = ["Customizations-and-Range", "About"];
+
+const navItems = ["Gallery", "About"];
 
 const Navbar = () => {
   const navContainerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,7 @@ const router = useRouter()
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0  top-4 z-50 h-16 px-4  border border-transparent !rounded-[1.2rem]  transition-all duration-700 sm:inset-x-6"
+      className="fixed inset-x-0  top-4 z-50 !h-16 px-4  border border-transparent !rounded-[1.2rem]  transition-all duration-700 sm:inset-x-6 max-w-[100dvw] "
     >
          {/* Mobile Navigation */}
          <div className="flex lg:hidden relative">
@@ -88,8 +89,8 @@ const router = useRouter()
               </SheetContent>
             </Sheet>
           </div>
-      <header className="absolute top-1/2  -translate-y-1/2 py-3">
-        <nav className="flex size-full items-center ">
+      <header className="absolute top-1/2   -translate-y-1/2 py-3">
+        <nav className="flex w-full   items-center ">
           {/* Logo and Main Button */}
           <div className="flex items-center gap-7 w-full justify-between">
             <a href="/">

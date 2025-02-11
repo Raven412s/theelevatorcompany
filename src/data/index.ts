@@ -76,23 +76,24 @@ export const umbrellaPoints = [
   export const slides = [
     {
         id: 1,
-        image: '/images/parrallax/10.jpg',
-        title: 'Elevate with Precision',
-        subtitle: 'Delivering safe and reliable elevator solutions for modern buildings.',
+        image: '/images/parrallax/7.jpg',
+        title: 'Rise Above with Precision',
+        subtitle: 'Revolutionizing elevator systems for a safer, smoother journey.',
     },
     {
         id: 2,
         image: '/images/parrallax/12.jpg',
-        title: 'Innovative Design',
-        subtitle: 'Crafting elevators that seamlessly integrate with your architecture.',
+        title: 'Design That Inspires',
+        subtitle: 'Elevators that blend innovation with stunning architectural aesthetics.',
     },
     {
         id: 3,
-        image: '/images/parrallax/8.jpg',
-        title: 'Empower Mobility',
-        subtitle: 'Enhancing vertical transportation with cutting-edge technology.',
+        image: '/images/parrallax/3.jpg',
+        title: 'Unleashing Vertical Freedom',
+        subtitle: 'Leading the future of vertical transport with advanced technology.',
     }
 ];
+
 
 export const images: string[] = [
     '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg',
@@ -101,12 +102,43 @@ export const images: string[] = [
   ];
 
   export const testimonials = [
-    { id: 1, title: "1000+", subtitle: "Lifts installed globally, enhancing vertical mobility", videoSrc: "videos/testimonials/1.mp4", imgSrc: "images/testimonials/1.jpg" },
-    { id: 2, title: "500+", subtitle: "Happy customers benefiting from our advanced elevator solutions", videoSrc: "videos/video1.mp4", imgSrc: "images/testimonials/2.jpg" },
-    { id: 3, title: "150+", subtitle: "Services delivered, ensuring smooth and reliable elevator operations", videoSrc: "videos/video1.mp4", imgSrc: "images/testimonials/3.avif" },
-    { id: 4, title: "15+", subtitle: "Countries served with cutting-edge elevator and lift technologies", videoSrc: "videos/video1.mp4", imgSrc: "images/testimonials/4.jpg" },
-    { id: 5, title: "10+", subtitle: "Years of experience in designing and manufacturing world-class elevator systems", videoSrc: "videos/video1.mp4", imgSrc: "images/testimonials/5.jpg" },
-];
+    {
+      id: 1,
+      title: "1000+",
+      subtitle: "Lifts seamlessly installed worldwide, transforming vertical mobility by 100%",
+      videoSrc: "videos/testimonials/1.mp4",
+      imgSrc: "images/testimonials/1.jpg"
+    },
+    {
+      id: 2,
+      title: "+95%",
+      subtitle: "Over 95% of our customers experience enhanced convenience with our advanced elevator solutions",
+      videoSrc: "videos/video1.mp4",
+      imgSrc: "images/testimonials/2.jpg"
+    },
+    {
+      id: 3,
+      title: "1500+",
+      subtitle: "Reliable service excellence delivered with a 99% satisfaction rate, ensuring smooth operations",
+      videoSrc: "videos/video1.mp4",
+      imgSrc: "images/testimonials/3.avif"
+    },
+    {
+      id: 4,
+      title: "15+",
+      subtitle: "Serving 15+ countries with cutting-edge lift technology, setting new global standards",
+      videoSrc: "videos/video1.mp4",
+      imgSrc: "images/testimonials/4.jpg"
+    },
+    {
+      id: 5,
+      title: "10+ Years",
+      subtitle: "A decade of innovation—100% commitment to precision engineering and safety",
+      videoSrc: "videos/video1.mp4",
+      imgSrc: "images/testimonials/5.jpg"
+    }
+  ];
+
 
   export const luxuryHomeLifts: Lift[] = [
     {
@@ -114,24 +146,28 @@ export const images: string[] = [
       image: "/images/luxury/felix.jpg",
       description: "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
       features: ["Smooth ride", "Customizable interiors", "Compact design"],
+      type: "Hydraulic"
     },
     {
       name: "Felix-2.0",
       image: "/images/luxury/felix2.png",
       description: "An upgraded version of Felix with advanced safety features and enhanced capacity.",
       features: ["Enhanced safety", "Greater load capacity", "Eco-friendly technology"],
+      type: "Belt-Drive"
     },
     {
       name: "Climber-X",
       image: "/images/luxury/climberx.png",
       description: "Engineered for luxury homes, combining aesthetics with high performance.",
       features: ["Aesthetic appeal", "High-speed motor", "Advanced control system"],
+      type: "Stair Lift"
     },
     {
-      name: "Pneumatic-Elevator",
+      name: "Vacuum-100",
       image: "/images/luxury/pneumatic.jpg",
       description: "A revolutionary design with no cables or pulleys, perfect for compact spaces.",
       features: ["Space-saving", "Modern technology", "Easy installation"],
+      type: "Pnuematic"
     },
   ];
 
@@ -141,158 +177,294 @@ export const images: string[] = [
       image: "/images/commercial/elivio.jpg",
       description: "A reliable lift for commercial buildings with heavy usage and durability.",
       features: ["High capacity", "Durable design", "Optimized for efficiency"],
+      type: "Machine Room"
     },
     {
       name: "Elivio-2.0",
       image: "/images/commercial/elivio2.jpg",
       description: "An advanced version of Elivio with improved speed and safety.",
       features: ["Faster operation", "Enhanced safety", "Smart monitoring"],
+      type: "Machine Room Less"
     },
     {
       name: "Eleventra",
       image: "/images/commercial/eleventra.jpg",
       description: "Designed for high-rise buildings, offering exceptional performance and comfort.",
       features: ["Comfortable ride", "High-speed elevator", "Advanced durability"],
+      type: "Goods Lift"
     },
   ];
 
   export const productsData = [
     {
-      images: ["/images/luxury/felix.jpg", "/images/luxury/felix2.png"],
-      productTitle: "Felix",
-      productDescription:
-        "A sleek and elegant lift for modern homes, with silent operation and high energy efficiency.",
-      productFeatures: [
-        "Compliance: Meets European Machinery Directive",
-        "Mechanism: Hydraulic with a smooth operating speed of 0.3 - 0.5 m/s",
-        "Compatible with single-phase power",
-        "Number of Stops: Upto 6 stops",
-        "Indoor / Outdoor",
-        "Space-Saving Design: Minimum pit requirement of just 200 mm and headroom clearance of 2800mm",
-        "Eco-Friendly Feature: Using energy only while ascending"
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Felix",
+        productDescription:
+          "Felix is an elegant, AI-assisted home elevator designed for modern residences. Featuring German vacuum-sealed hydraulic technology, it ensures smooth, whisper-quiet operation. Engineered for optimal space efficiency, Felix requires no pit or bulky overhead structures. It operates on a single-phase power supply, making it ideal for contemporary homes seeking seamless vertical mobility. With a sleek design and energy-efficient functionality, Felix combines luxury with cutting-edge European technology.",
+        productFeatures: [
+            "German vacuum-sealed hydraulics",
+            "European machinery with German precision",
+            "AI-assisted smart elevator",
+            "No pit or No headroom",
+            "Complies with European and Indian safety standards",
+            "Runs on single-phase power",
+            "Vastu-compliant space-saving design",
+            "Smart controls with automated error detection",
+          "Whisper-quiet & energy-efficient",
+          "Auto emergency braking & lowering device",
+          "Sleek designs with customizable interiors",
+          "Affordable luxury with global sturdiness",
+        ],
+        productSpecialFeature:
+          "Using energy-efficient German vacuum-sealed hydraulic technology, Felix is a luxury home elevator designed for those who seek sophistication, efficiency, and seamless performance."
+      },
+      {
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Felix-2.0",
+        productDescription:
+          "Felix-2.0 is an advanced AI-assisted elevator, setting new standards in durability and precision. Featuring a gearless traction mechanism, it delivers exceptionally smooth vertical mobility without compromising on efficiency. Its advanced belt-drive technology ensures reduced wear and tear, making it ideal for high-end homes and premium residential spaces. The system operates without a traditional pit, making it an effortless fit for modern interiors while maintaining whisper-quiet functionality.",
+          productFeatures: [
+              "High-durability belt drive",
+              "Gearless traction for ultra-smooth ride",
+              "German architecture for lasting performance",
+              "Complies with European and Indian safety standards",
+              "AI-powered error detection",
+              "Single-phase power compatible",
+              "No pit, compact installation",
+            "Vastu-compliant compact structure",
+          "Silent operation with modern braking",
+          "Sleek designs with customizable interiors",
+          "Smart controls with automated error detection",
+          "Smart diagnostics with AI integration",
+        ],
+        productSpecialFeature:
+          "Felix-2.0 features a gearless traction system with AI-assisted precision, ensuring a smoother, quieter, and longer-lasting elevator experience without the need for deep pits or traditional steel cables."
+      },
+      {
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Climber-X",
+        productDescription:
+          "Climber-X is a smart stair lift designed for seamless vertical mobility in homes and public spaces. Engineered with an advanced rack-and-pinion system, it effortlessly adapts to both straight and curved staircases. With AI-assisted technology, it offers smooth and precise movements, ensuring safety and reliability. Featuring a compact and pitless design, it integrates seamlessly into any architectural space while maximizing accessibility and ease of use.",
+        productFeatures: [
+            "Smooth rack-and-pinion drive",
+            "AI-assisted stair lift",
+            "Seamless AI-integrated controls",
+            "Noise-free smart motor",
+            "Smart controls with automated error detection",
+            "European-grade materials",
+            "Affordable smart stair mobility",
+          "Works on straight & curved stairs",
+          "Next to Zero Maintenance",
+          "Compact, pitless installation",
+          "Battery backup for power failures",
+          "Designed for global safety compliance",
+        ]
+      },
+    {
+      images: [
+        "/images/luxury/felix.jpg",
+        "/images/luxury/felix2.png",
+        "/images/luxury/felix.jpg",
+        "/images/luxury/felix2.png"
       ],
-      productSpecialFeature:
-        "Using energy-efficient hydraulic technology, Felix is perfect for homes looking to save on power without compromising on luxury and style."
-    },
-    {
-      images: ["/images/luxury/felix2.0.jpg", "/images/luxury/felix2.1.png"],
-      productTitle: "Felix-2.0",
-      productDescription:
-        "An advanced version of the Felix lift with cutting-edge belt-drive technology for improved performance and durability.",
-      productFeatures: [
-        "Compliance: Meets European Machinery Directive",
-        "Mechanism: Gearless Traction Mechanism",
-        "Speed: 0.4-1m/s",
-        "Compatible with single-phase power",
-        "Number of Stops: Upto 6 stops",
-        "Indoor / Outdoor",
-        "Minimum pit required: 200mm"
-      ],
-      productSpecialFeature:
-        "Uses durable, high-strength belts instead of traditional steel cables, resulting in reduced wear and tear, increased lifespan, and quieter performance. Utilizes a gearless motor for smooth, quiet, and efficient operation without the need for a gearbox."
-    },
-    {
-      images: ["/images/luxury/climberx.png", "/images/luxury/climberx2.png"],
-      productTitle: "Climber-X",
-      productDescription:
-        "A compact lift designed for indoor and outdoor staircases, ensuring accessibility for every space.",
-      productFeatures: [
-        "Compliance: Meets European Machinery Directive",
-        "Mechanism: Rack and Pinion Mechanism",
-        "Smooth operating speed of 0.10 - 0.15 m/s",
-        "Compatible with single-phase power",
-        "Space-Saving Design: Can be easily installed in staircases with a stair width of 900mm",
-        "Eco-Friendly Feature: Power-efficient with a 24vdc motor that operates on a chargeable battery"
-      ]
-    },
-    {
-      images: ["/images/luxury/pneumatic.jpg", "/images/luxury/pneumatic2.png"],
       productTitle: "Pneumatic-Elevator",
       productDescription:
-        "A revolutionary lift using pneumatic vacuum technology, offering unparalleled design and efficiency for modern homes.",
-      productFeatures: [
-        "Drive System: Pneumatic vacuum technology using air pressure",
-        "Lift Capacity: Up to 220 kg (485 lbs)",
-        "Number of Passengers: 2 to 4 passengers (depending on model)",
-        "Travel Speed: 0.15 m/s (15 cm/s)",
-        "Power Supply: Single-phase power (220V)",
-        "Stops: Up to 5 stops (15 meters maximum travel height)",
-        "Installation: Self-supporting structure, no pit, shaft, or machine room required",
-        "Safety Features: Emergency brakes, battery backup, and safety locks",
-        "LEC (Low Energy Consumption)"
-      ]
+        "The Pneumatic-Elevator is a futuristic vertical mobility solution powered by vacuum technology. Designed for homes and offices, it eliminates the need for machine rooms, cables, or counterweights. Its sleek, self-supporting structure enhances architectural aesthetics while ensuring whisper-quiet performance. AI-assisted smart controls and advanced safety features make it a perfect choice for those seeking luxury, convenience, and efficiency in an eco-friendly package.",
+        productFeatures: [
+            "AI-powered vacuum lift",
+            "Self-supporting, pitless design",
+            "No machine room or cables",
+            "Runs on single-phase power",
+            "Ultra-quiet, frictionless travel",
+            "Smart controls with automated error detection",
+            "Customizable luxury cabin",
+            "Complies with European and Indian safety standards",
+            "Vastu-optimized structure",
+            "European eco-smart innovation",
+            "Engineered for international performance"
+          ]
     },
     {
-      images: ["/images/luxury/elivio.jpg", "/images/luxury/elivio2.png"],
-      productTitle: "Elivio",
-      productDescription:
-        "A robust and versatile lift designed for commercial, residential, and industrial buildings, meeting the highest safety standards.",
-      productFeatures: [
-        "Compliance: Meets European standard EN81-41",
-        "Usage: Commercial, Residential, and Industrial buildings",
-        "Mechanism: Elevator with Machine Room",
-        "Power: Compatible with three-phase power",
-        "Minimum pit requirement: 1500 mm",
-        "Headroom clearance: 4800 mm",
-        "Tailor-Made Solution",
-        "Capacity: 408 kg - 2500 kg",
-        "Speed: 1.0 m/s to 2.5 m/s",
-        "Number of Stops: Up to 20 stops"
-      ]
-    },
-    {
-      images: ["/images/luxury/elivio2.jpg", "/images/luxury/elivio2.1.png"],
-      productTitle: "Elivio-2.0",
-      productDescription:
-        "A machine-room-less lift offering gearless traction for seamless and efficient operation in modern buildings.",
-      productFeatures: [
-        "Compliance: Meets European standard EN81-41",
-        "Drive System: Gearless Traction",
-        "Usage: Commercial, Residential, and Industrial buildings",
-        "Mechanism: Elevator without Machine Room",
-        "Power: Compatible with three-phase power",
-        "Capacity: 408 kg - 2500 kg",
-        "Speed: 1.0 m/s to 2.5 m/s",
-        "Number of Stops: Up to 20 stops"
-      ]
-    },
-    {
-      images: ["/images/luxury/eleventra.jpg", "/images/luxury/eleventra2.png"],
-      productTitle: "Eleventra",
-      productDescription:
-        "A high-power lift designed to handle heavy loads, making it ideal for transporting goods, vehicles, stretchers, and more.",
-      productFeatures: [
-        "Types: Good Lift, Car Lift, Stretcher Lift, Service Lift, Scissor Lift",
-        "Capacity: Supports heavy loads up to 10,000 kg",
-        "Usage: Industrial and Commercial applications",
-        "Mechanism: Hydraulic and Gear-based options",
-        "Safety Features: Advanced braking system, overload sensors, and emergency stop mechanism",
-        "Durability: Reinforced structure for long-term usage in demanding environments",
-        "Installation: Customizable solutions for varied building requirements",
-        "Energy Efficiency: High-performance motor with low energy consumption"
-      ]
-    }
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Elivio",
+        productDescription: "Elivio is a robust, AI-assisted smart elevator designed for commercial, residential, and industrial applications. Featuring German-engineered traction technology, it delivers unparalleled performance, efficiency, and durability. With an advanced control system, Elivio offers seamless vertical mobility while maintaining superior safety standards. Ideal for high-rise buildings, it ensures reliability, energy efficiency, and a customizable modern aesthetic.",
+        productFeatures: [
+            "Geared Machinery with Machine room technology",
+            "Complies with European and Indian safety standards",
+            "Eco-smart low-energy use",
+            "Smart lift with real-time monitoring",
+            "Built for global reliability & performance",
+            "Next-gen innovation with intelligent diagnostics",
+            "German technology excellence in design",
+            "Provides Bigger Cabin in the entire Country",
+            "Silent-ride",
+            "High-efficiency three-phase power",
+            "AI-powered elevator Smart Elevator",
+          "Advanced safety & braking",
+        ]
+      },
+      {
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Elivio-2.0",
+        "productDescription": "Elivio-2.0 is a next-generation smart elevator featuring a gearless traction system for ultra-smooth and efficient operation. Designed with AI-assisted controls, it offers intelligent monitoring, error-free diagnostics, and seamless mobility. Its machine-room-less structure and pitless design make it ideal for modern commercial and residential spaces, ensuring energy-efficient vertical transportation with premium aesthetics.",
+        productFeatures: [
+            "Gearless, Machine-room-less technology",
+            "Complies with European and Indian safety standards",
+            "Eco-smart low-energy use",
+            "Smart lift with real-time monitoring",
+            "Built for global reliability & performance",
+            "Next-gen innovation with intelligent diagnostics",
+            "German technology excellence in design",
+            "Provides Bigger Cabin in the entire Country",
+            "Ultra-quiet precision ride",
+            "High-efficiency three-phase power",
+            "AI-powered elevator Smart Elevator",
+          "Advanced safety & braking",
+        ]
+      },
+      {
+        images: [
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png",
+          "/images/luxury/felix.jpg",
+          "/images/luxury/felix2.png"
+        ],
+        productTitle: "Eleventra",
+        "productDescription": "The Eleventra Commercial Lift is a state-of-the-art elevator designed for heavy-duty use, perfect for car lifts, stretchers, and goods transport in high-end commercial and industrial spaces. With cutting-edge gearless traction technology, it delivers smooth, fast, and energy-efficient vertical transportation. Its robust build, combined with advanced safety features and intelligent controls, ensures seamless performance under demanding conditions. The Eleventra is designed for durability, with a pitless and machine-room-less structure for maximum space utilization and flexibility.",
+        productFeatures: [
+          "Heavy-duty lift for Carrying weight",
+          "Available in Gearless & Geared traction Technology",
+          "High load capacity & safety tech",
+          "Requires pit & machine room",
+          "AI-powered diagnostics & monitoring",
+          "Energy-efficient & durable",
+          "Complies with European and Indian safety standards",
+          "Smart controls with automated error detection",
+          "Standard-grade materials for extreme conditions",
+          "Cost-effective solution for large-scale needs",
+          "Innovative AI algorithms for real-time efficiency"
+        ]
+      }
   ];
 
-  export     const features = [
-    "Italian designs",
-    "Vastu compliance",
+
+
+  export const features = [
+    "Italian Designs",
+    "European Technology",
+    "German Machinery",
+    "Vastu Compliance",
     "Customisable Cabins",
-    "Cost efficient",
+    "Cost Efficient",
     "Low Energy Consumption",
     "Innovative",
     "Reliable",
     "Efficient",
     "Modern",
     "Lift Automation",
+    "Smart Elevators",
+    "AI-Assisted",
+    "Error-Free Performance",
+    "Pit-Less & Headless Designs",
     "Tailored Solutions",
-    "Internationally certified",
-    "194 safety parameters",
-    "Tuv Sud Certified",
+    "Internationally Certified",
+    "194 Safety Parameters",
+    "TÜV SÜD Certified",
     "Imported Machinery",
     "Smooth and Quiet Operation",
     "Flexibility in Installation",
-    "Space Saving Design",
+    "Space-Saving Design",
     "Voice Command Enabled",
-    "Safe for all Age"
+    "Safe for All Ages",
+    "Advanced Vertical Mobility Solutions"
   ];
+
+  export const services = [
+    {
+        title: "Elevator Installation",
+        body: "Professional installation of high-quality elevators for residential and commercial buildings.",
+        src: "services/1.jpg",
+        icon: "installation"
+    },
+    {
+        title: "Elevator Modernization",
+        body: "Upgrade your old elevators with the latest technology and safety features.",
+        src: "services/1.mp4",
+        icon: "modernization"
+    },
+    {
+        title: "Maintenance & Repairs",
+        body: "Regular maintenance and 24/7 repair services to keep your elevators running smoothly.",
+        src: "services/2.jpeg",
+        icon: "maintenance"
+    },
+    {
+        title: "Custom Elevator Design",
+        body: "Design and manufacture custom elevators to meet your building's unique needs.",
+        src: "interior/3.jpg",
+        icon: "design"
+    },
+    {
+        title: "Home Elevators",
+        body: "Compact and stylish elevators designed for private residences and villas.",
+        src: "services/2.mp4",
+        icon: "home"
+    },
+    // {
+    //     title: "Dumbwaiters",
+    //     body: "Small service elevators for hotels, hospitals, and restaurants.",
+    //     src: "product/felix.jpg"
+    // },
+    {
+        title: "Emergency Rescue Systems",
+        body: "Safety systems for power failures and emergencies, ensuring passenger safety.",
+        src: "services/4.mp4",
+        icon: "emergency"
+    },
+    {
+        title: "Lift Consultation & Compliance",
+        body: "Expert guidance on elevator compliance, regulations, and safety standards.",
+        src: "interior/1.jpg",
+        icon: "consultation"
+    },
+  ];
+
+ export  const preferences = [
+    {
+        title: "With Shaft",
+        description: " With an in-built patented metal structure, this lift does not require a separate shaft or support.",
+        image1: "shaft/withShaftOne.png",
+        image2: "shaft/withShaftTwo.png"
+    },
+    {
+        title: "WithOut Shaft",
+        description: "Requires a separate structure built of concrete, brick, or metal fabrication.",
+        image1: "shaft/withoutShaftOne.png",
+        image2: "shaft/withoutShaftTwo.webp"
+    }
+  ]

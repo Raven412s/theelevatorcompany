@@ -1,9 +1,10 @@
 import BentoCard, { BentoTilt } from '@/components/animated/Grid'
 import { TiLocationArrow } from 'react-icons/ti'
+import Bounded from './common/Bounded'
 
 const Section2 = () => {
   return (
-    <section className=" min-h-screen min-w-[100vw] bg-[#131415]  ">
+    <Bounded className=" !min-h-screen !min-w-[100vw] !my-[30%]">
         <div className="container mx-auto px-3 md:px-10">
             <div className="px-5 py-32">
                 <p className="font-circular-web text-lg text-north-50">Rising Above the Ordinary</p>
@@ -57,7 +58,7 @@ const Section2 = () => {
                 </BentoTilt>
             </div>
         </div>
-    </section>
+    </Bounded>
   )
 }
 

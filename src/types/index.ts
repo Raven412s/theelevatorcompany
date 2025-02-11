@@ -27,6 +27,7 @@ export type Lift = {
     image: string;
     description: string;
     features: string[];
+    type: string;
   };
 
   export interface TemplateProps {

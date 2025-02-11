@@ -8,7 +8,7 @@ const NavFooterWrapper = ({children}: PropsWithChildren) => {
     <div>
       <Navbar/>
       {children}
-      <Contact/>
+      {/* <Contact/> */}
     </div>
   )
 }
